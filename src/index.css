@@ -1,0 +1,51 @@
+:root {
+
+  font-size: 15px;
+
+  background-color: var(--first-color);
+
+  --font-family: 'Rubik', sans-serif !important;
+
+
+  /* Paleta de colores */
+    --first-color: #002138;
+    --second-color: #013254;
+    --third-color: #269BDC;
+    --fourth-color: #2CD2E9;
+    --fifth-color: #C7C7C7;
+    --sixth-color: #8F8F8F;
+    --seventh-color: #3E3E3E;
+
+}
+
+/* Containers */
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:992) and (max-width: 1199px) {
+  :root {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 991px) {
+  :root {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 759px){
+  :root {
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-width: 575px)  {
+  :root {
+    font-size: 0.2rem;
+  }
+}

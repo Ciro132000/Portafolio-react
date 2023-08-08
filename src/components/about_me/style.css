@@ -1,0 +1,43 @@
+p{
+   color: var(--fifth-color);
+   line-height: 2rem;
+   font-size: 1.2rem;
+}
+
+.About-img{
+   width: 60%;
+   border-radius: 50%; /* Hace que la imagen tenga bordes redondeados */
+   
+   overflow: hidden; 
+   background-color: #3E3E3E;
+
+   box-shadow: 18px 21px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Title-h2{
+   text-align: center;
+   color: var(--third-color);
+   font-size: 3.3rem;
+   text-decoration: underline 3px var(--fifth-color);
+}
+
+.About-button{
+   border: none;
+   background-color: transparent;
+   color: var(--third-color);
+   font-size: 1.6rem;
+   padding: 0rem 2rem;
+   transition: 1s;
+}
+
+.About-FontAwesomeIcon{
+   margin-right: 1rem;
+}
+
+.About-button:hover{
+   transform: scale(1.1);
+   color: var(--fifth-color);
+   border-radius: 1rem;
+   background-color: var(--third-color);
+}
+
