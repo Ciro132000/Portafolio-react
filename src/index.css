@@ -12,10 +12,18 @@
     --second-color: #013254;
     --third-color: #269BDC;
     --fourth-color: #2CD2E9;
-    --fifth-color: #C7C7C7;
+    --fifth-color: #c7c7c7;
     --sixth-color: #8F8F8F;
     --seventh-color: #3E3E3E;
 
+  /* Colores para usar rgb */
+  --rgb-first-color: 0, 33, 56;
+  --rgb-second-color: 1, 50, 84;
+  --rgb-third-color: 38, 155, 220;
+  --rgb-fourth-color: 44, 210, 233;
+  --rgb-fifth-color: 199, 199, 199;
+  --rgb-sixth-color: 143, 143, 143;
+  --rgb-seventh-color: 62, 62, 62;
 }
 
 /* Containers */
@@ -28,24 +36,24 @@
 
 @media (min-width:992) and (max-width: 1199px) {
   :root {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (min-width: 760px) and (max-width: 991px) {
   :root {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 }
 
 @media (min-width: 576px) and (max-width: 759px){
   :root {
-    font-size: 0.4rem;
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 575px)  {
   :root {
-    font-size: 0.2rem;
+    font-size: 0.7rem;
   }
 }

@@ -1,4 +1,13 @@
 .Skills-div{
     border-radius: 5.2rem;
     background: var(--second-color);
+    padding: 2rem 0rem;
+}
+
+.Icon-Skill{
+    max-width: 50% !important;
+}
+
+.slider-skills{
+    margin-top: 2rem;
 }

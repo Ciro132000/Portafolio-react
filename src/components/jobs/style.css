@@ -1,0 +1,84 @@
+.Jobs-container{
+    padding: 5rem 0rem;
+    color: var(--fifth-color);
+}
+
+
+.col-company{
+    display: flex;
+    justify-content: end;
+}
+
+
+.Jobs-experience{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Job-item{
+    width: 100%;
+    justify-content: space-between;
+    line-height: 3rem;
+    margin-bottom: 4rem;
+}
+
+.Company h3{
+    font-size:  2.8rem;
+    font-weight: bold;
+}
+
+.Company span{
+    color: var(--sixth-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.Job-title h3{
+    color: var(--fourth-color);
+    font-size:  2.8rem;
+    font-weight: bold;
+}
+
+
+.Job-title ul{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.circle{
+    width: 6.6rem;
+    height: 6.6rem;
+    background-color: rgba(var(--rgb-fifth-color), 0.2);
+    border-radius: 50%;
+    margin: 0rem 3rem;
+    position: relative;
+    animation: beat 2s infinite;
+}
+
+.circle::before{
+    content: "";
+    position: absolute;
+    background-color: var(--fifth-color);
+    border-radius: 50%;
+    height: 3.3rem;
+    width: 3.3rem;
+    /* top: calc(80% - 3rem);
+    right: calc(80% - 3rem); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes beat {
+    10%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
