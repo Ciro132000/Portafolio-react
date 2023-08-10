@@ -2,3 +2,15 @@
     background-color: var(--first-color);
 }
 
+.btn-header{
+    font-size: 2.6rem;
+    animation-duration: 2s;
+    animation-name: rebote;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.btn:hover{
+    background-color: var(--seventh-color);
+    color: var(--third-color);
+}

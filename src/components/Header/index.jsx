@@ -13,7 +13,7 @@ function Header(){
                         <h1>Ciro Jean Pierre Candiotti Ramirez</h1>
                         <h2 className='Header-h2'>Front End Developer</h2>
 
-                        <button className='btn'>Contáctame</button>
+                        <button className='btn btn-header'>Contáctame</button>
                     </div>
 
                     <div className='col-md-4 col-sm-12 balon'>
