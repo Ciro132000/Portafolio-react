@@ -5,9 +5,16 @@
 }
 
 .Icon-Skill{
+    min-width: 20%;
     max-width: 50% !important;
 }
 
 .slider-skills{
     margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+    .Icon-Skill{
+        max-width: 25% !important ;
+    }
 }

@@ -1,6 +1,4 @@
-.About-container{
-   padding: 5rem 0rem;
-}
+
 
 p{
    color: var(--fifth-color);
@@ -54,3 +52,16 @@ p{
    background-color: var(--third-color);
 }
 
+@media (max-width: 767px) {
+   .About-img img{
+      width: 50%;
+   }
+
+   .About-container h2{
+      margin-top: 3rem;
+   }
+
+   .About-container{
+      
+   }
+}

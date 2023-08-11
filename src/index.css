@@ -26,6 +26,7 @@
   --rgb-seventh-color: 62, 62, 62;
 }
 
+
 /* Containers */
 
 @media (min-width: 1200px) {
@@ -56,4 +57,14 @@
   :root {
     font-size: 0.7rem;
   }
+
+  h2{
+    font-size: 2rem !important;
+  }
+
+  h3{
+    font-size: 1.7rem !important;
+  }
+
+ 
 }
