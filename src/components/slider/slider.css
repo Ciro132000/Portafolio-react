@@ -25,5 +25,12 @@
     justify-content: center;
 }
 .slider-icon{
-    margin: 0rem 0.3rem;
+    margin: 0rem 0.4rem;
+    cursor: pointer;
+    transition: 1s;
 }
+
+.slider-icon:hover{
+    transform: scale(1.3);
+}
+

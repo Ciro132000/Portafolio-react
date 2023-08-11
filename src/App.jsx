@@ -7,6 +7,7 @@ import Contact from './components/contact'
 import Jobs from './components/jobs'
 import Projects from './components/projects'
 import Skills from './components/skills'
+import Cetificates from './components/certificates'
 //import { useFirebaseApp } from 'reactfire'
 
 
@@ -33,7 +34,7 @@ function App() {
       <Skills/>
       <Jobs/>
       <Projects/>
-
+      <Cetificates/>
       <Contact/>
     </div>
   )

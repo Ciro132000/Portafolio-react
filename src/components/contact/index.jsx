@@ -4,7 +4,7 @@ import './style.css'
 function Contact() {
     return(
         <div className="container">
-            <h2 className="Title-h2">Contácto</h2>
+            <h2 className="Title-h2">Contáctame</h2>
             <p>
             <strong>¿Listo para dar vida a tu proyecto?</strong> ¡Hablemos! Estoy aquí para escuchar tus ideas, colaborar contigo y transformarlas en resultados excepcionales. Contacta conmigo y comencemos a crear juntos algo increíble
             </p>

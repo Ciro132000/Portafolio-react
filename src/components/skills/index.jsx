@@ -45,14 +45,14 @@ function Skills(){
 		let tamanoMaximo=0
 
 		if(width>1200){
-			tamanoMaximo = 4
+			tamanoMaximo = 6
 		}else if(width>768){
-			tamanoMaximo = 3
+			tamanoMaximo = 4
 		}
 		else if(width>576){
-			tamanoMaximo = 2
+			tamanoMaximo = 3
 		}else{
-			tamanoMaximo = 1
+			tamanoMaximo = 3
 		}
 
 		for (let i = 0; i < data.length; i += tamanoMaximo) {
@@ -76,7 +76,7 @@ function Skills(){
 							<Slide>
 								<div key={imagen.id} className='row row-slider'>
 									{imagen.map(item => (
-										<div key={item.id} className='col-12 col-md-4 col-sm-6 col-xl-3 d-flex justify-content-center
+										<div key={item.id} className='col-4 col-md-3 col-sm-4 col-xl-2 d-flex justify-content-center
 										item-skill aling-items-center' >									
 												<img className='Icon-Skill' src={item.picture} alt=""/>
 										</div>

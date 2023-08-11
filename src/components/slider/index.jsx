@@ -101,10 +101,15 @@ const Slideshow = ({
 					<FlechaDerecha />
 				</Boton>
 			</Controles>}
-			<div className='counter'>
-				{ children.map((chil)=>(
+			{/* <div className='counter'>
+				{ [1,2].map((chil)=>(
 					<FontAwesomeIcon className='slider-icon' icon={faCircle} />
 				)) }
+			</div> */}
+
+			<div className='counter'>
+				<FontAwesomeIcon className='slider-icon' icon={faCircle} onClick={anterior} />
+				<FontAwesomeIcon className='slider-icon' icon={faCircle} derecho='true' onClick={siguiente} />
 			</div>
 		</ContenedorPrincipal>
 	);
@@ -127,21 +132,16 @@ const Slide = styled.div`
 	transition: .3s ease all;
 	z-index: 10;
 	/* max-height: 500px; */
-	position: relative;
 
-	img {
-		width: 100%;
-		vertical-align: top;
-	}
+
 `;
 
 const TextoSlide = styled.div`
-	background: ${props => props.colorFondo ? props.colorFondo : 'rgba(0,0,0,.3)'};
-	color: ${props => props.colorTexto ? props.colorTexto : '#fff'};
+	color: var(--fifth-color);
 	width: 100%;
 	padding: 10px 60px;
 	text-align: center;
-	position: absolute;
+
 	bottom: 0;
 
 	@media screen and (max-width: 700px) {
