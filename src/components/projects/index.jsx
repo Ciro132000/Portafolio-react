@@ -21,8 +21,6 @@ function Projects() {
         })
     }, [])
 
-    console.log('Aca ->', data)
-
     return(
         <div className=''>
             

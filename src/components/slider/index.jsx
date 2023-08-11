@@ -4,6 +4,7 @@ import React, {useRef, useEffect, useCallback} from 'react';
 import FlechaIzquierda from '../../assets/iconmonstr-angel-left-thin';
 import FlechaDerecha from '../../assets/iconmonstr-angel-right-thin';
 import styled from 'styled-components';
+import './slider.css'
 
 const Slideshow = ({
 		children,
@@ -96,18 +97,15 @@ const Slideshow = ({
 				<Boton onClick={anterior}>
 					<FlechaIzquierda />
 				</Boton>
-				<Boton derecho onClick={siguiente}>
+				<Boton derecho='true' onClick={siguiente}>
 					<FlechaDerecha />
 				</Boton>
 			</Controles>}
-			{/* {
-				function(){
-					for(let i = 0; i<children.length; i++) {
-						<FontAwesomeIcon icon={faCircle} />
-					}
-				}
-			} */}
-
+			<div className='counter'>
+				{ children.map((chil)=>(
+					<FontAwesomeIcon className='slider-icon' icon={faCircle} />
+				)) }
+			</div>
 		</ContenedorPrincipal>
 	);
 }

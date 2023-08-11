@@ -26,8 +26,8 @@ function Contact() {
 <form className="Form-contact">
     <div className="row">
         <div className="col">
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="correo" placeholder="name@example.com"/>
+            <div className="form-floating mb-3">
+                <input type="email" className="form-control" id="correo" placeholder="name@example.com"/>
                 <label for="correo">Correo</label>
             </div>
 
@@ -49,7 +49,7 @@ function Contact() {
 
     <div className="row">
         <div className="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" ></textarea>
+        <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea2" ></textarea>
         <label for="floatingTextarea2">Mensaje</label>
         </div>
     </div>

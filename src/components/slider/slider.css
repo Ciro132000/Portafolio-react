@@ -18,3 +18,12 @@
     height: 100%;
     pointer-events: none;
 } */
+
+.counter{
+    color: var(--fifth-color) !important;
+    display: flex;
+    justify-content: center;
+}
+.slider-icon{
+    margin: 0rem 0.3rem;
+}
