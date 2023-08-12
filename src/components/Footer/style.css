@@ -1,0 +1,18 @@
+.footer{
+    color: var(--fifth-color);
+    margin: 3rem 0rem;
+}
+
+.img-logo-content img{
+    background-color: var(--seventh-color);
+    height: 5rem;
+    padding: 0.2rem;
+    border-radius: 1rem;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 1.2rem;
+}

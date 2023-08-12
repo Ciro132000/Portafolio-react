@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUpRightFromSquare, faCodePullRequest } from '@fortawesome/free-solid-svg-icons'
 import { getFirestore, getDoc, getDocs, collection } from 'firebase/firestore'
 
-import Porjects from '../../exports/proyectos'
 import './style.css'
 
 function ProjectsCards() {
@@ -22,36 +21,29 @@ function ProjectsCards() {
     }, [])
 
     return(
-        <div className=''>
+        <div className='container'>
             
             <h2 className='Title-h2'>Proyectos</h2>
-            {
-                data.map((project,index)=>(
-                    <div className={`${'Projects-card my-5'} ${ index %2 != 0 ? 'Projects-card-right':'Projects-card-left'}`}>
-                        <div className="container">
-                            <div className={ `${'card-project'}  ${ index %2 != 0 ? 'd-flex flex-row-reverse':'row'}` } >
-                                <div className="col-12 col-md-6 col-sm-12">
-                                    <h3>{project.title}</h3>
-                                    <p>
-                                        {project.description}
-                                    </p>
-                                    <div className='Projetc-iconos d-flex'>
-                                        <div>
-                                            <FontAwesomeIcon icon={faUpRightFromSquare} />
-                                        </div>
-                                        <div>
-                                            <FontAwesomeIcon icon={faCodePullRequest} />
-                                        </div>
+            <div className="row ">
+                {
+                    data.map((project,index)=>(
+                            <div className="col-12 col-sm-6 col-md-4 my-3">
+                                <div className="card cards-projects">
+                                <img className="card-img-top" src={project.picture} alt="Card image cap" />
+                                <div className="card-body">
+                                    <h5 className="card-title">{project.title}</h5>
+                                    <p className="card-text">{project.description}</p>
+                                    <div className='links'>
+                                        <a href="#" className="btn btn-primary">Go somewhere</a>
+
                                     </div>
                                 </div>
-                                <div className="col-12 col-md-6 col-sm-12">
-                                    <img className='img-project' src={project.picture} alt="" />
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                ))
-            }
+                    ))
+                }
+
+            </div>
         </div>
     )
 }

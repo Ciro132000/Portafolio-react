@@ -10,6 +10,15 @@ function AboutMe(){
 
     const [data, setData] = useState({});
 
+
+    const downloadFile = (fileUrl) => {
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = true;
+        link.target = '_blank';
+        link.click();
+    };
+
     useEffect(() => {
         const querydb = getFirestore();
         const queryCollection = collection(querydb, 'perfil');
@@ -31,7 +40,7 @@ function AboutMe(){
                     { data.description }
                     </p>
 
-                    <button className='About-button'>
+                    <button className='About-button' onClick={() => downloadFile('https://res.cloudinary.com/dwpmiqt1p/image/upload/v1691800742/Portafolio/cv/CV_CANDIOTTI_CIRO.pdf')}>
                         <FontAwesomeIcon icon={faCloudArrowDown} className='About-FontAwesomeIcon'/>
                         Descargar mi CV
                     </button>

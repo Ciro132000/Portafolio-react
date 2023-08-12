@@ -8,6 +8,8 @@ import Jobs from './components/jobs'
 import Projects from './components/projects'
 import Skills from './components/skills'
 import Cetificates from './components/certificates'
+import ProjectsCards from './components/projects/projectsCards'
+import Footer from './components/Footer'
 //import { useFirebaseApp } from 'reactfire'
 
 
@@ -33,9 +35,11 @@ function App() {
       <AboutMe/>
       <Skills/>
       <Jobs/>
-      <Projects/>
+      <Projects/> 
+      {/* <ProjectsCards/> */}
       <Cetificates/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }

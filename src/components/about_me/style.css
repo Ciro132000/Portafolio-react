@@ -46,10 +46,10 @@ p{
 }
 
 .About-button:hover{
-   transform: scale(1.1);
+   transform: scale(1.2);
    color: var(--fifth-color);
    border-radius: 1rem;
-   background-color: var(--third-color);
+   
 }
 
 @media (max-width: 767px) {

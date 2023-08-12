@@ -1,46 +1,52 @@
 
 
-.Skills-div{
-    border-radius: 5.2rem;
-    background: var(--second-color);
-    padding: 2rem 0rem;
+.certificate-div{
+    margin-bottom: 5rem
 }
 
-.row-slider{
-    height: 10rem;
+.row-slider-certicate{
+    height: 13rem;
     margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 
 .item-certificate{
-    position: relative;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* background: green; */
     position: relative;
+    cursor: pointer;
 }
 
 .Icon-certificate{
-    position: absolute;
     height: 80%;
-    max-width:70% !important;
+    max-width:40%;
     display: block;
     filter: grayscale(100%);
     transition: 1s;
     cursor: pointer;
-    /* background-color: black; */
+
 }
 
-.title-certificate{
-    position: absolute;
-    bottom: 0;
-    background-color: red;
+.title-certificate p{
+    height: 20%;
     font-size: 1rem;
     text-align: center;
+    color: var(--sixth-color);
+    font-weight: bolder;
+    transition: 1s;
 }
 
-.Icon-certificate:hover{
-    filter: grayscale(0%);
+.item-certificate:hover{
+    .Icon-certificate{
+        filter: grayscale(0%);
+        transform: scale(1.3);
+    }
+
+    .title-certificate p{
+        color: var(--fifth-color);
+    }
 }
 
 
