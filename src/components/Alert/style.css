@@ -1,0 +1,19 @@
+.alert-dismissible{
+    position: fixed;
+    top: 2rem;
+    right: 0;
+    animation: slideIn 1.2s;
+    background-color: rgb(255, 13, 13,0.8);
+    border: none;
+    color: var(--fifth-color);
+}
+
+
+@keyframes slideIn {
+    from {
+      transform: translateX(100%); /* Empieza fuera de la pantalla */
+    }
+    to {
+      transform: translateX(0); /* Termina en la posición final */
+    }
+  }

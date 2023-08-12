@@ -1,3 +1,5 @@
+import React, {Suspense} from 'react'
+
 import { QuerySnapshot } from 'firebase/firestore'
 import './App.css'
 import Header from './components/Header'
@@ -15,31 +17,21 @@ import Footer from './components/Footer'
 
 function App() {
 
-  // const Data =  async () => {
-  //   await db.collection("perfil").onSnapshot(
-  //     (querySnapshot) => {
-  //        return querySnapshot;
-  //       }
-  //     );
-  // }
-
-  // console.log(Data())
-    
-
-  // const firebase = useFirebaseApp();
-  // console.log(firebase)
+  const Preloader = () => <div>Cargando...</div>;
   
   return (
     <div className='App-div'>
-      <Header/>
-      <AboutMe/>
-      <Skills/>
-      <Jobs/>
-      <Projects/> 
-      {/* <ProjectsCards/> */}
-      <Cetificates/>
-      <Contact/>
-      <Footer/>
+      <Suspense fallback={<Preloader />}>
+        <Header/>
+        <AboutMe/>
+        <Skills/>
+        <Jobs/>
+        <Projects/> 
+        {/* <ProjectsCards/> */}
+        <Cetificates/>
+        <Contact/>
+        <Footer/>
+      </Suspense>
     </div>
   )
 }

@@ -21,6 +21,7 @@
     justify-content: space-between;
     line-height: 3rem;
     margin-bottom: 4rem;
+    position: relative;
 }
 
 .Company h3{
@@ -47,8 +48,8 @@
 }
 
 .circle{
-    width: 6.6rem;
-    height: 6.6rem;
+    width: 4rem;
+    height: 4rem;
     background-color: rgba(var(--rgb-fifth-color), 0.2);
     border-radius: 50%;
     margin: 0rem 3rem;
@@ -61,14 +62,24 @@
     position: absolute;
     background-color: var(--fifth-color);
     border-radius: 50%;
-    height: 3.3rem;
-    width: 3.3rem;
+    height: 2rem;
+    width: 2rem;
     /* top: calc(80% - 3rem);
     right: calc(80% - 3rem); */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+ 
+.pointer-line::before {
+    content: "";
+    position: absolute;
+    height: calc(100% - 2rem);
+    width: 0.3rem; /* Altura de los guiones */
+    background: repeating-linear-gradient(to bottom, transparent, transparent 1rem, var(--fifth-color) 1rem, var(--fifth-color) 1.9rem);
+    bottom: 0;
+  }
+  
 
 @keyframes beat {
     10%{

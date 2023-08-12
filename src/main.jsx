@@ -9,9 +9,11 @@ import './index.css'
 
 import './firebase/firebase-config'
 
+const Preloader = () => <div>Cargando...</div>;
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <Suspense fallback={'Conectando app ... '}> 
+      <Suspense fallback={<Preloader/>}> 
         <App />
       </Suspense>
   </React.StrictMode>,

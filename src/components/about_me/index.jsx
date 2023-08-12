@@ -31,10 +31,10 @@ function AboutMe(){
     return(
         <div className="container About-container my-5">
             <div className="row">
-                <div className="col-md-5 col-sm-12 About-img">
+                <div className="col-md-5 col-sm-12 About-img" data-aos="zoom-in">
                     <img src={data.profile_picture} alt="" />
                 </div>
-                <div className="col-md-7 col-sm-12">
+                <div className="col-md-7 col-sm-12" data-aos="zoom-in-up">
                     <h2 className='Title-h2'>Sobre mí</h2>
                     <p>
                     { data.description }

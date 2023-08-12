@@ -34,8 +34,6 @@ function Cetificates() {
     });
   }, []);
 
-  console.log(data);
-
   // Agrupando Items
   const Items = () => {
     const subarrays = [];

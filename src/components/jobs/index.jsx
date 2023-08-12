@@ -17,7 +17,7 @@ function Jobs(){
                             <span>Enero 2022 - Mayo 2022</span>
                         </div>
                     </div>
-                    <div className="col-2">
+                    <div className="col-2 pointer-line d-flex justify-content-center">
                         <span>
                             <div className='circle'></div>
                         </span>
