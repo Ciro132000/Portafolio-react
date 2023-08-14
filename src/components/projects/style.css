@@ -1,6 +1,11 @@
+.projetc-container{
+
+    overflow: hidden;
+}
+
 .Projects-card{
     background-color: var(--second-color);
-    padding: 2rem 0rem;
+    
 }
 
 .Projects-card h3{
@@ -37,18 +42,47 @@
 }
 
 .Projetc-iconos div{
-    font-size: 2rem;
-    color: var(--sixth-color);
     transition: 1s;
     cursor: pointer;
     margin: 0rem 1rem;
+
+    position: relative;
+    display: inline-block;
 }
 
-.Projetc-iconos div:hover{
-    transform: scale(1.2);
+.Projetc-iconos .link-project{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--sixth-color);
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Projetc-iconos .link-project:hover{
     color: var(--fourth-color);
     /* animation: beat 2s infinite; */
+    font-size: 2rem;
+    border-radius: 10px;
 }
+
+.link-project i{
+    margin: auto
+}
+
+
+.link-project span{
+    visibility: hidden;
+    transition: 0.8s;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.link-project:hover span{
+    visibility: visible;
+}
+
 
 .img-project{
     width: 70%;
@@ -72,3 +106,4 @@
 
     
 }
+

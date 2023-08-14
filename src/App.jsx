@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react'
+import React, {Suspense, useContext} from 'react'
 
 import { QuerySnapshot } from 'firebase/firestore'
 import './App.css'
@@ -14,24 +14,34 @@ import Footer from './components/Footer'
 //import { useFirebaseApp } from 'reactfire'
 
 
+import { DataContext } from './context/DataProvider'
+import Loading from './components/loading/index'
+
 
 
 function App() {
 
+  const {loading} = useContext(DataContext)
+  console.log(loading)
 
-  return (
-    <div className='App-div'>
-        <Header/>
-        <AboutMe/>
-        <Skills/>
-        <Jobs/>
-        <Projects/> 
-        {/* <ProjectsCards/> */}
-        <Cetificates/>
-        <Contact/>
-        <Footer/>
-    </div>
-  )
+  if(loading){
+    return(
+      <Loading/>
+    )
+  }else{
+    return (
+        <div className='App-div'>
+            <Header/>
+            <AboutMe/>
+            <Skills/>
+            <Jobs/>
+            <Projects/>
+            <Cetificates/>
+            <Contact/>
+            <Footer/>
+        </div>
+    )
+  }
 }
 
 export default App
