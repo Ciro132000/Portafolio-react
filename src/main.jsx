@@ -1,7 +1,8 @@
-import React, {Suspense} from 'react'
+import React from 'react';
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import Loading from './components/loading'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import { FirebaseAppProvider } from 'reactfire'
@@ -9,12 +10,10 @@ import './index.css'
 
 import './firebase/firebase-config'
 
-const Preloader = () => <div>Cargando...</div>;
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <Suspense fallback={<Preloader/>}> 
-        <App />
-      </Suspense>
+        <App/>
   </React.StrictMode>,
 )

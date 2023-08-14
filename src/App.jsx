@@ -10,18 +10,17 @@ import Jobs from './components/jobs'
 import Projects from './components/projects'
 import Skills from './components/skills'
 import Cetificates from './components/certificates'
-import ProjectsCards from './components/projects/projectsCards'
 import Footer from './components/Footer'
 //import { useFirebaseApp } from 'reactfire'
 
 
+
+
 function App() {
 
-  const Preloader = () => <div>Cargando...</div>;
-  
+
   return (
     <div className='App-div'>
-      <Suspense fallback={<Preloader />}>
         <Header/>
         <AboutMe/>
         <Skills/>
@@ -31,7 +30,6 @@ function App() {
         <Cetificates/>
         <Contact/>
         <Footer/>
-      </Suspense>
     </div>
   )
 }

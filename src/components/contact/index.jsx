@@ -69,7 +69,7 @@ function Contact() {
         .sendForm(serviceId, templateId, refForm.current, apiKey)
         .then((result) => {
           const res = result.text;
-          if ((res = "OK")) {
+          if (res == "OK") {
             setSendMessage(true);
 
             setFormData({

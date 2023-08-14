@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUpRightFromSquare, faCodePullRequest } from '@fortawesome/free-solid-svg-icons'
 import { getFirestore, getDoc, getDocs, collection } from 'firebase/firestore'
 
-import Porjects from '../../exports/proyectos'
 import './style.css'
 
 function Projects() {

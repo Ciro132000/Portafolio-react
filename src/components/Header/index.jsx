@@ -6,6 +6,7 @@ import "./style.css";
 import { getFirestore, getDoc, getDocs, collection } from "firebase/firestore";
 
 function Header() {
+
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -14,6 +15,7 @@ function Header() {
     getDocs(queryCollection).then((res) => {
       setData(res.docs[0].data());
     });
+
   }, []);
 
   return (
@@ -55,5 +57,7 @@ function Header() {
     </div>
   );
 }
+
+
 
 export default Header;

@@ -9,8 +9,6 @@ import {
   getDocs,
   collection,
 } from "firebase/firestore";
-import { Slideshow, Slide } from "../slider";
-import SVGS from "../../exports/conocimientos";
 import "./style.css";
 import useScreenSize from "../../helpers/SizedScreen";
 
