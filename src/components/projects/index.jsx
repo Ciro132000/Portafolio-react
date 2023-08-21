@@ -22,6 +22,16 @@ function Projects() {
     });
   }, []);
 
+  const filterObjetc = (obj) => {
+    let valores = Object.values(obj);
+    const newArray = [];
+    for (let i = 0; i < valores.length; i++) {
+      newArray.push(...valores[i]);
+    }
+
+    return newArray;
+  };
+
   return (
     <div className="projetc-container">
       <h2 className="Title-h2" data-aos="flip-up">
@@ -34,7 +44,6 @@ function Projects() {
           }`}
           data-aos={`${index % 2 != 0 ? "fade-right" : "fade-left"}`}
         >
-          {/* data-aos={`${ index %2 != 0 ? 'fade-right':'fade-left'}`} */}
           <div className="container">
             <div
               className={`${"card-project"}  ${
@@ -44,6 +53,17 @@ function Projects() {
               <div className="col-12 col-md-6 col-sm-12">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
+                <div className="row-technologies">
+                  {
+                    filterObjetc(project.technologies).map((technologie) => (
+                      <div className="technologies"> {technologie} </div>
+                    ))
+                  }
+                </div>
+                
+              </div>
+              <div className="col-12 col-md-6 col-sm-12">
+                <img className="img-project" src={project.picture} alt="" />
                 <div className="Projetc-iconos d-flex">
                   {project.links.deploy ? (
                     <div>
@@ -76,9 +96,6 @@ function Projects() {
                     ""
                   )}
                 </div>
-              </div>
-              <div className="col-12 col-md-6 col-sm-12">
-                <img className="img-project" src={project.picture} alt="" />
               </div>
             </div>
           </div>

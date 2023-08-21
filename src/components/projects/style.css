@@ -15,7 +15,7 @@
 }
 
 .Projects-card p{
-    text-align: justify;
+   
     font-size: 1.2rem;
 }
 
@@ -39,6 +39,7 @@
     justify-content: center;
     display: flex;
     position: relative;
+    margin-top: 2rem;
 }
 
 .Projetc-iconos div{
@@ -88,6 +89,7 @@
     width: 70%;
 }
 
+
 @media (max-width: 767px) {
     .card-project{
         display: flex !important;
@@ -105,5 +107,29 @@
     }
 
     
+}
+
+.row-technologies{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 5rem;
+}
+
+.technologies{
+    border: 0.1rem solid var(--fifth-color);
+    border-radius: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    color: var(--fifth-color);
+    font-size: 0.8rem;
+    box-shadow:  5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    transition: 1s
+}
+
+.technologies:hover{
+    border-color: var( --fourth-color);
+    color: var( --fourth-color);
 }
 
