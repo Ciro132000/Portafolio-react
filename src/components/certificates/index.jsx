@@ -61,9 +61,9 @@ function Cetificates() {
 
   return (
     <div className="certificate-div">
-      <h2 className="Title-h2">Certificaciones</h2>
+      <h2 className="Title-h2" data-aos="flip-up">Certificaciones</h2>
 	  <div className="container">
-      <Carousel interval={2000}>
+      <Carousel interval={2000} data-aos="zoom-in">
         {Items().map((certificateGroup) => (
           <Carousel.Item>
             <div key={certificateGroup.id} className="row row-slider-certicate">

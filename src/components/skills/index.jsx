@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 
 import Carousel from "react-bootstrap/Carousel";
+import { DataContext } from '../../context/DataProvider'
 
 import {
   getFirestore,
@@ -13,17 +14,23 @@ import "./style.css";
 import useScreenSize from "../../helpers/SizedScreen";
 
 function Skills() {
+  const resData = useContext(DataContext).dataResponse[2]
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const querydb = getFirestore();
-    const queryCollection = doc(querydb, "skills", "4pPJ2DE4EoSUGzUT2Nok");
-    getDoc(queryCollection).then(async (res) => {
-      const resData = res.data();
-      const sendData = filterObjetc(resData);
-      const d = filterArray(sendData);
-      setData(d);
-    });
+    // const querydb = getFirestore();
+    // const queryCollection = doc(querydb, "skills", "4pPJ2DE4EoSUGzUT2Nok");
+    // getDoc(queryCollection).then(async (res) => {
+    //   const resData = res.data();
+    //   const sendData = filterObjetc(resData);
+    //   const d = filterArray(sendData);
+    //   setData(d);
+    // });
+
+    const sendData = filterObjetc(resData);
+    const d = filterArray(sendData);
+    setData(d);
+
   }, []);
 
   const filterObjetc = (obj) => {
@@ -90,13 +97,13 @@ function Skills() {
     //     </div>
     // </div>
 
-    <div className="Skills-div">
-      <h2 className="Title-h2">Conocimientos</h2>
+    <div className="Skills-div" data-aos="zoom-in">
+      <h2 className="Title-h2" data-aos="flip-up">Conocimientos</h2>
       <div className="container">
-        <Carousel interval={2000}>
+        <Carousel interval={2000} data-aos="zoom-in">
           {Items().map((imagen) => (
             <Carousel.Item>
-              <div key={imagen.id} className="row row-slider">
+              <div key={imagen.id} className="row row-slider" >
                 {imagen.map((item) => (
                   <div
                     key={item.id}

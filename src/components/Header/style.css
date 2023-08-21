@@ -1,11 +1,22 @@
-.fd{
+.container-header{
     background: var(--second-color);
     margin: 0;
-    min-height: 70vh;
-    border-radius: 0px 0px 5.2rem 5.2rem;
+    padding: 0;
     display: flex;
     align-items: center;
+    transition: 2s !important;
+    min-height: 70vh;
+    border-radius: 0px 0px 5.2rem 5.2rem;
 }
+
+.full-screen {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    border-radius: none; 
+    background: var(--second-color);
+}
+
 
 h1{
     color: var(--fifth-color);
@@ -24,6 +35,17 @@ h1{
     animation-name: rebote;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    transition: 3s;
+}
+
+@keyframes reduce-screen {
+    from {
+        height: 100vh;
+      }
+    
+      to {
+          transform: 70vh;
+      }
 }
 
 @keyframes rebote {
@@ -54,15 +76,6 @@ h1{
     justify-content: center;
 }
 
-/* .balon::before{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 10rem solid transparent;
-    border-right: 10rem solid transparent;
-    border-bottom: 20rem solid ;
-} */
 
 @keyframes reboteBalon {
     10%{

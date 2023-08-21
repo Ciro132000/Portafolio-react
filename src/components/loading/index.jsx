@@ -6,9 +6,7 @@ import './style.css'
 function Loading(){
     return(
         <div className="Loading-container">
-            <span>
-                Cargando
-            </span>
+            <span class="loader"></span>
         </div>
     )
 }

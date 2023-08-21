@@ -95,11 +95,11 @@ function Contact() {
   }
 
   return (
-    <div className="Skills-div">
+    <div className="Skills-div" id="contactame" data-aos="zoom-in">
       {erroSendMessage ? <AlertDismissibleExample /> : ""}
 
       <div className="container ">
-        <h2 className="Title-h2">Contáctame</h2>
+        <h2 className="Title-h2" data-aos="flip-up">Contáctame</h2>
         <p>
           <strong>¿Listo para dar vida a tu proyecto?</strong> ¡Hablemos! Estoy
           aquí para escuchar tus ideas, colaborar contigo y transformarlas en

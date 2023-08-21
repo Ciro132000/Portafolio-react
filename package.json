@@ -21,6 +21,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
+    "react-spring": "^9.7.2",
     "reactfire": "^4.0.0-rc.2",
     "styled-components": "^6.0.7"
   },

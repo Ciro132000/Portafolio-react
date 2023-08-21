@@ -1,6 +1,11 @@
+.projetc-container{
+
+    overflow: hidden;
+}
+
 .Projects-card{
     background-color: var(--second-color);
-    padding: 2rem 0rem;
+    
 }
 
 .Projects-card h3{
@@ -10,7 +15,7 @@
 }
 
 .Projects-card p{
-    text-align: justify;
+   
     font-size: 1.2rem;
 }
 
@@ -34,25 +39,56 @@
     justify-content: center;
     display: flex;
     position: relative;
+    margin-top: 2rem;
 }
 
 .Projetc-iconos div{
-    font-size: 2rem;
-    color: var(--sixth-color);
     transition: 1s;
     cursor: pointer;
     margin: 0rem 1rem;
+
+    position: relative;
+    display: inline-block;
 }
 
-.Projetc-iconos div:hover{
-    transform: scale(1.2);
+.Projetc-iconos .link-project{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--sixth-color);
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Projetc-iconos .link-project:hover{
     color: var(--fourth-color);
     /* animation: beat 2s infinite; */
+    font-size: 2rem;
+    border-radius: 10px;
 }
+
+.link-project i{
+    margin: auto
+}
+
+
+.link-project span{
+    visibility: hidden;
+    transition: 0.8s;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.link-project:hover span{
+    visibility: visible;
+}
+
 
 .img-project{
     width: 70%;
 }
+
 
 @media (max-width: 767px) {
     .card-project{
@@ -72,3 +108,28 @@
 
     
 }
+
+.row-technologies{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 5rem;
+}
+
+.technologies{
+    border: 0.1rem solid var(--fifth-color);
+    border-radius: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    color: var(--fifth-color);
+    font-size: 0.8rem;
+    box-shadow:  5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    transition: 1s
+}
+
+.technologies:hover{
+    border-color: var( --fourth-color);
+    color: var( --fourth-color);
+}
+

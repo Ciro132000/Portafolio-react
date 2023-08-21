@@ -1,15 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCloudArrowDown } from '@fortawesome/free-solid-svg-icons'
 import './style.css'
 
+import { DataContext } from '../../context/DataProvider'
+
 import { getFirestore, doc, getDoc, getDocs, collection } from 'firebase/firestore'
 
 function AboutMe(){
 
-    const [data, setData] = useState({});
+    // const [data, setData] = useState({});
 
+    // useEffect(() => {
+    //     const querydb = getFirestore();
+    //     const queryCollection = collection(querydb, 'perfil');
+    //     getDocs(queryCollection ).then(res=>{
+    //         setData(res.docs[0].data())
+    //     })
+    // }, [])
 
     const downloadFile = (fileUrl) => {
         const link = document.createElement('a');
@@ -19,14 +28,9 @@ function AboutMe(){
         link.click();
     };
 
-    useEffect(() => {
-        const querydb = getFirestore();
-        const queryCollection = collection(querydb, 'perfil');
-        getDocs(queryCollection ).then(res=>{
-            setData(res.docs[0].data())
-        })
-    }, [])
+    const data = useContext(DataContext).dataResponse[1]
 
+    console.log(data)
 
     return(
         <div className="container About-container my-5">
@@ -35,7 +39,7 @@ function AboutMe(){
                     <img src={data.profile_picture} alt="" />
                 </div>
                 <div className="col-md-7 col-sm-12" data-aos="zoom-in-up">
-                    <h2 className='Title-h2'>Sobre mí</h2>
+                    <h2 className='Title-h2' data-aos="flip-up">Sobre mí</h2>
                     <p>
                     { data.description }
                     </p>
